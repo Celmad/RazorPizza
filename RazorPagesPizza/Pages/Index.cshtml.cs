@@ -19,7 +19,7 @@ namespace RazorPagesPizza.Pages
             _context = context;
         }
 
-        public IList<Pizza> Pizza { get;set; } = default!;
+        public IList<Pizza> Pizzas { get;set; } = default!;
 
         [BindProperty(SupportsGet = true)]
         public string ? SearchString { get; set; }
@@ -35,7 +35,7 @@ namespace RazorPagesPizza.Pages
 
             if (_context.Pizza != null)
             {
-                Pizza = await pizzas.ToListAsync();
+                Pizzas = await pizzas.ToListAsync();
             }
         }
     }

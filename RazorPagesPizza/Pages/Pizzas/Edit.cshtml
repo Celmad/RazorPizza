@@ -1,12 +1,12 @@
 @page
 @using RazorPagesPizza.Models
-@model RazorPagesPizza.Pages.CreateModel
+@model RazorPagesPizza.Pages.Pizzas.EditModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-<h1>Create</h1>
+<h1>Edit</h1>
 
 <h4>Pizza</h4>
 <hr />
@@ -14,6 +14,7 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Pizza.Id" />
             <div class="form-group mb-2">
                 <label asp-for="Pizza.Name" class="control-label"></label>
                 <input asp-for="Pizza.Name" class="form-control" />
@@ -34,14 +35,14 @@
                 <select asp-for="Pizza.Size" asp-items="Html.GetEnumSelectList<PizzaSize>()"></select>
             </div>
             <div class="form-group mb-2">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="./Index">Back to List</a>
 </div>
 
 @section Scripts {

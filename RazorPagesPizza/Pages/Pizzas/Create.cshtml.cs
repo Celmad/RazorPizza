@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using RazorPagesPizza.Data;
 using RazorPagesPizza.Models;
 
-namespace RazorPagesPizza.Pages
+namespace RazorPagesPizza.Pages.Pizzas
 {
     public class CreateModel : PageModel
     {

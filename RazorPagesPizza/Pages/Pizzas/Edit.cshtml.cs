@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesPizza.Data;
 using RazorPagesPizza.Models;
 
-namespace RazorPagesPizza.Pages
+namespace RazorPagesPizza.Pages.Pizzas
 {
     public class EditModel : PageModel
     {
